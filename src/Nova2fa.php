@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Menu\MenuSection;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
+use Partybussen\Nova2fa\Support\Url;
 use PragmaRX\Google2FA\Google2FA as G2fa;
 use PragmaRX\Recovery\Recovery;
-use PragmaRX\Google2FA\Support\Url;
 use Inertia\Inertia;
 
 class Nova2fa extends Tool
