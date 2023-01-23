@@ -1,0 +1,21 @@
+{
+    "Enter your code": "Voer je code in",
+    "Enter the 6-digit security code from your authenticator app.":
+        "Voer de 6-cijferige beveiligingscode in van je authenticator app.",
+    "Verify": "Controleren",
+    "Don't have a code?": "Heb je geen code?",
+    "There was a problem submitting the form.": "Er is iets mis gegaan bij het verzenden van het formulier.",
+    "2-step verification": "2-staps verificatie",
+    "Add an extra layer of security to your account by using a one-time security code in addition to your password each time you log in.":
+        "Voeg extra beveiliging toe aan je account door elke keer als je inlogt gebruik te maken van een eenmalige beveiligingscode naast je wachtwoord.",
+    "Store the recovery codes below in a safe space.": "Bewaar de herstelcodes hieronder op een veilige plaats.",
+    "Scan the QR code below or manually type the secret key into your authenticator app.":
+        "Scan de QR-code hieronder of voer de sleutel handmatig in in je authenticator app.",
+    "Enter the 6-digit code you see in your authenticator app.":
+        "Voer de 6-cijferige code in die je ziet in je authenticator app.",
+    "2-step verification recovery": "2-staps verificatie herstellen",
+    "Enter one of your recovery codes. If you don't have any, please contact the system administrator.":
+        "Voer een van je herstelcodes in. Als je er geen hebt, neem dan contact op met de beheerder",
+    "Recovery code": "Herstelcode",
+    "Try again with a code?": "Opnieuw proberen met een code?"
+}
