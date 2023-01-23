@@ -40,12 +40,12 @@ class ToolServiceProvider extends ServiceProvider
             // Publishing the configuration file.
             $this->publishes([
                 __DIR__ . '/../config/nova2fa.php' => config_path('nova2fa.php'),
-            ], 'nova2fa.config');
+            ], 'nova-2fa-config');
 
             // Publishing the migrations.
             $this->publishes([
                 __DIR__.'/../database/migrations/' => database_path('migrations')
-            ], 'migrations');
+            ], 'nova-2fa-migrations');
         }
     }
 
