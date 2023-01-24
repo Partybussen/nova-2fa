@@ -16,4 +16,4 @@ use Partybussen\Nova2fa\Http\Controllers\Nova2faController;
 
 Route::post('/verify', [Nova2faController::class, 'verify'])->name('nova2fa.verify');
 Route::post('/confirm', [Nova2faController::class, 'confirmRegistration'])->name('nova2fa.confirm');
-Route::post('/recover', [Nova2faController::class, 'checkRecovery'])->name('nova2fa.recover');
+Route::post('/recover', [Nova2faController::class, 'checkRecovery'])->name('nova2fa.checkRecovery');
