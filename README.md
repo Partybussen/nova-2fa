@@ -24,7 +24,7 @@ public function tools()
 ## Publish config and migration
 ```
 artisan vendor:publish --tag=nova-2fa-config
-artisan vendor:publish --tag=nova-2fa-migration
+artisan vendor:publish --tag=nova-2fa-migrations
 ```
 
 ## Run migration
