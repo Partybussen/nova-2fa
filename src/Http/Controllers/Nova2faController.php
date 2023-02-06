@@ -23,7 +23,7 @@ class Nova2faController extends Controller
 
         $google2fa = new G2fa();
 
-        return $google2fa->verifyKey(auth()->user()->user2fa->google2fa_secret, $secret);
+        return $google2fa->verifyKey(auth(config('nova.guard'))->user()->user2fa->google2fa_secret, $secret);
     }
 
     private function isRecoveryValid($recover, $recoveryHashes): bool
@@ -155,13 +155,13 @@ class Nova2faController extends Controller
         ]);
 
         $recoveryCode = $request->get('recovery_code');
-        $recoveryHashes = json_decode(auth()->user()->user2fa->recovery, true);
+        $recoveryHashes = json_decode(auth(config('nova.guard'))->user()->user2fa->recovery, true);
 
         if ($this->isRecoveryValid($recoveryCode, $recoveryHashes)) {
             $user2faModel = config('nova2fa.models.user2fa');
 
             // delete 2fa settings for this user
-            $user2faModel::where('user_id', auth()->user()->id)->delete();
+            $user2faModel::where('user_id', auth(config('nova.guard'))->user()->id)->delete();
 
             return response()->json([
                 'redirect' => Nova::url('/nova-2fa/register')
@@ -184,8 +184,8 @@ class Nova2faController extends Controller
         ]);
 
         if ($this->is2FAValid($request->get('code'))) {
-            auth()->user()->user2fa->google2fa_enable = 1;
-            auth()->user()->user2fa->save();
+            auth(config('nova.guard'))->user()->user2fa->google2fa_enable = 1;
+            auth(config('nova.guard'))->user()->user2fa->save();
             $authenticator = app(Google2FAAuthenticator::class);
             $authenticator->login();
 
