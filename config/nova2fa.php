@@ -57,4 +57,9 @@ return [
      * Optional field on the User model that indicates if 2fa is required for the user. The field should be a boolean.
      */
     'requires_2fa_attribute' => null,
+
+    'google_qr_code_url' => env('NOVA_2FA_GOOGLE_QR_URL', 'https://quickchart.io/'),
+
+    'google_qr_code_query' => env('NOVA_2FA_GOOGLE_QR_QUERY', 'chs=200x200&chld=M|0&cht=qr&chl='),
+
 ];

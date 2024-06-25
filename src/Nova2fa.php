@@ -165,9 +165,9 @@ class Nova2fa extends Tool
         }
 
         $google2fa_url = Url::generateGoogleQRCodeUrl(
-            'https://chart.googleapis.com/',
+            config('nova2fa.google_qr_code_url'),
             'chart',
-            'chs=200x200&chld=M|0&cht=qr&chl=',
+            config('nova2fa.google_qr_code_query'),
             $google2fa->getQRCodeUrl(
                 config('app.name'),
                 auth()->user()->email,
